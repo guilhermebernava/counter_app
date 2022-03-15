@@ -45,6 +45,7 @@ class _HomeState extends State<Home> {
           Text(
             "Contador \n $number",
             textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 36, fontWeight: FontWeight.w600),
           ),
           Row(
             children: [
@@ -59,7 +60,10 @@ class _HomeState extends State<Home> {
             ],
           ),
           const Spacer(),
-          ElevatedButton(child: const Text("ZERAR"), onPressed: () => zero()),
+          ElevatedButton(
+              child: const Text("ZERAR",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
+              onPressed: () => zero()),
           const Spacer()
         ],
       )),

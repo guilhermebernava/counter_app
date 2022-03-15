@@ -24,6 +24,12 @@ class _HomeState extends State<Home> {
     setState(() {});
   }
 
+  void zero() {
+    setState(() {
+      number = 0;
+    });
+  }
+
   //LOGICA QUE CRIA O WIDGET
   //quando for um STATELESS so vai existir esse CONSTRUTOR de BUILD
   @override
@@ -52,6 +58,8 @@ class _HomeState extends State<Home> {
               const Spacer()
             ],
           ),
+          const Spacer(),
+          ElevatedButton(child: const Text("ZERAR"), onPressed: () => zero()),
           const Spacer()
         ],
       )),

@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
     number--;
     setState(() {});
   }
-  
+
   //LOGICA QUE CRIA O WIDGET
   //quando for um STATELESS so vai existir esse CONSTRUTOR de BUILD
   @override
@@ -33,12 +33,28 @@ class _HomeState extends State<Home> {
         title: const Text("Contador"),
       ),
       body: Center(
-          child: Text(
-        'Contador\n $number',
-        textAlign: TextAlign.center,
+          child: Column(
+        children: <Widget>[
+          const Spacer(),
+          Text(
+            "Contador \n $number",
+            textAlign: TextAlign.center,
+          ),
+          Row(
+            children: [
+              const Spacer(),
+              FloatingActionButton(
+                  child: const Icon(Icons.remove),
+                  onPressed: () => decreament()),
+              const Spacer(),
+              FloatingActionButton(
+                  child: const Icon(Icons.add), onPressed: () => increament()),
+              const Spacer()
+            ],
+          ),
+          const Spacer()
+        ],
       )),
-      floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.add), onPressed: () => increament()),
     );
   }
 }
